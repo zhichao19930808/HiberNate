@@ -32,7 +32,6 @@ public class Classs {
                 "cid='" + cid + '\'' +
 
                 ", cname='" + cname + '\'' +
-                ", studentList=" + studentList +
                 '}';
     }
 
