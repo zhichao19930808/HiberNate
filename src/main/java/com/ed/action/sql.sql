@@ -9,3 +9,9 @@ CREATE TABLE db_test.person (
 );
 SELECT *
 FROM db_test.person;
+SHOW TABLES FROM db_test;
+SELECT *
+FROM db_test.m2o_classs;
+SELECT *
+FROM db_test.m2o_student;
+

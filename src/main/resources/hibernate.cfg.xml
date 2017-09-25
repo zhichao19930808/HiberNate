@@ -20,5 +20,7 @@
     <property name="hibernate.current_session_context_class">thread</property><!--配置CurrentSession-->
 
     <mapping class="com.ed.action.entity.Person"/>
+    <mapping class="com.ed.action.entity.manyToOne.Classs"/>
+    <mapping class="com.ed.action.entity.manyToOne.Student"/>
   </session-factory>
 </hibernate-configuration>
