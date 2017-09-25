@@ -22,5 +22,7 @@
     <mapping class="com.ed.action.entity.Person"/>
     <mapping class="com.ed.action.entity.manyToOne.Classs"/>
     <mapping class="com.ed.action.entity.manyToOne.Student"/>
+    <mapping class="com.ed.action.entity.manyToMany.Classs"/>
+    <mapping class="com.ed.action.entity.manyToMany.Student"/>
   </session-factory>
 </hibernate-configuration>
