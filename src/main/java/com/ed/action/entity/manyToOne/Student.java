@@ -1,7 +1,8 @@
 package com.ed.action.entity.manyToOne;
 
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
-
+import org.hibernate.annotations.CascadeType;
 import javax.persistence.*;
 
 @Entity
@@ -11,6 +12,12 @@ public class Student {
     @GenericGenerator(name = "uuid", strategy = "uuid")
     @GeneratedValue(generator = "uuid")
     private String sId;
+    private String sName;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "cId")
+    @Cascade(CascadeType.SAVE_UPDATE)
+    private Classs ban;//学生所在班级
+
 
     @Override
     public String toString() {
@@ -54,9 +61,4 @@ public class Student {
     public Classs getBan() {
         return ban;
     }
-
-    private String sName;
-    @ManyToOne
-    @JoinColumn(name = "cId")
-    private Classs ban;//学生所在班级
 }

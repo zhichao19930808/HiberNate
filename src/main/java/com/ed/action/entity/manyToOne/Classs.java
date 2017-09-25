@@ -1,7 +1,8 @@
 package com.ed.action.entity.manyToOne;
 
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
-
+import org.hibernate.annotations.CascadeType;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +14,8 @@ public class Classs {
     @GeneratedValue(generator = "uuid")
     private String cId;
     private String cName;
-    @OneToMany(mappedBy = "ban")
+    @OneToMany(mappedBy = "ban", fetch = FetchType.LAZY)
+    @Cascade(CascadeType.SAVE_UPDATE)
     private List<Student> studentList = new ArrayList<Student>();
 
     public Classs(String cName) {
