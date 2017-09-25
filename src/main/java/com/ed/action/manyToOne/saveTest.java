@@ -17,14 +17,14 @@ public class saveTest {
 
         Session session = sessionFactory.openSession();
         session.getTransaction().begin();
-        Classs classs = new Classs("Java");
+        Classs classs = new Classs("Html");
         Student student1 = new Student("tom");
         Student student2 = new Student("张三");
 
         student1.setBan(classs);
         student2.setBan(classs);
 
-        session.save(classs);
+//        session.save(classs);
         session.save(student1);
         session.save(student2);
         session.getTransaction().commit();
