@@ -25,5 +25,6 @@
     <mapping class="com.ed.action.entity.manyToMany.Classs"/>
     <mapping class="com.ed.action.entity.manyToMany.Student"/>
     <mapping resource="Books.hbm.xml"/>
+    <mapping resource="Person.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
