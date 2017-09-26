@@ -5,7 +5,7 @@
 
 <hibernate-mapping>
 	
-	<class name="com.ed.action.entity.mapping_m2m.Person" table="xml_person" >
+	<class name="com.ed.action.entity.mapping_m2o.Person" table="xml_person" >
 		<id name="id" column="person_id">
 			<generator class="uuid"/>
 		</id>
@@ -13,7 +13,7 @@
 		<property name="time" column="person_time"/>
 		<set name="books" cascade="save-update" lazy="true">
             <key column="master_id"/>
-			<one-to-many class="com.ed.action.entity.mapping_m2m.Books"/>
+			<one-to-many class="com.ed.action.entity.mapping_m2o.Books"/>
 		</set>
 	</class>
 
