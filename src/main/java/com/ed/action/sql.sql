@@ -28,3 +28,4 @@ DROP TABLE db_test.m2m_student_classs;
 SELECT *
 FROM db_test.xml_person;
 DROP TABLE db_test.xml_person;
+

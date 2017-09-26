@@ -4,13 +4,13 @@
     "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <property name="connection.url">jdbc:mysql://127.0.0.1:3306/db_test?useUnicode=true&amp;characterEncoding=UTF-8&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC
-    </property>
+    <!--<property name="dialect">org.hibernate.dialect.MySQLDialect</property>-->
+    <property name="connection.url">jdbc:mysql://127.0.0.1:3306/db_test?useUnicode=true&amp;characterEncoding=UTF-8&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC</property>
     <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="connection.username">root</property>
     <property name="connection.password">Glory.0808</property>
 
-    <!-- DB schema will be updated if needed -->
+     <!--DB schema will be updated if needed -->
     <property name="hbm2ddl.auto">update</property> <!--自动建表-->
 
     <property name="format_sql">true</property>  <!--sql语句换行 -->
@@ -28,5 +28,7 @@
     <mapping resource="mapping/m2o/Person.hbm.xml"/>
     <mapping resource="mapping/o2o/Books.hbm.xml"/>
     <mapping resource="mapping/o2o/Person.hbm.xml"/>
+    <mapping resource="mapping/m2m/Books.hbm.xml"/>
+    <mapping resource="mapping/m2m/Person.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

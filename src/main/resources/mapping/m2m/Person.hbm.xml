@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class name="com.ed.action.entity.mapping_m2m.Person" table="xml_m2m_person" >
+		<id name="id" column="person_id" length="123">
+			<generator class="uuid"/>
+		</id>
+		<property name="name" column="person_name"/>
+		<property name="time" column="person_time"/>
+		<set name="books" table="xml_m2m_center" cascade="all">
+			<key column="personid"/>
+			<many-to-many class="com.ed.action.entity.mapping_m2m.Books" column="bookid"/>
+		</set>	</class>
+
+</hibernate-mapping>

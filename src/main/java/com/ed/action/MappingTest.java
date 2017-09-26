@@ -21,17 +21,17 @@ public class MappingTest {
 //        person.setName("tom");
 //        person.setTime(new Date());
 //        session.save(person);
-        Person person = session.get(Person.class, "297e45075ebd62fc015ebd63051b0000");
-        Book book = new Book();
-        book.setName("想个名不容易");
-        book.setTime(new Date());
-        book.setMaster(person);
+//        Person person = session.get(Person.class, "297e45075ebd62fc015ebd63051b0000");
+//        Book book = new Book();
+//        book.setName("想个名不容易");
+//        book.setTime(new Date());
+//        book.setMaster(person);
 //        Book book1 = new Book();
 //        book1.setName("确实不容易");
 //        book1.setTime(new Date());
 //        book1.setMaster(person);
 
-        session.save(book);
+//        session.save(book);
 //        session.save(book1);
 
 //        System.out.println("-----------------------------");
