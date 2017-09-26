@@ -1,7 +1,7 @@
 package com.ed.action;
 
-import com.ed.action.entity.mapping_m2o.Books;
-import com.ed.action.entity.mapping_m2o.Person;
+import com.ed.action.entity.mapping_o2o.Book;
+import com.ed.action.entity.mapping_o2o.Person;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -17,22 +17,22 @@ public class MappingTest {
         Session session = sessionFactory.getCurrentSession();
         session.getTransaction().begin();
 
-        Person person = new Person();
-        person.setName("tom");
-        person.setTime(new Date());
-        session.save(person);
-//        Person person = session.get(Person.class, "297e45075ebcf01e015ebcf0255e0000");
-        Books books = new Books();
-        books.setName("想个名不容易");
-        books.setTime(new Date());
-        books.setMaster(person);
-        Books books1 = new Books();
-        books1.setName("确实不容易");
-        books1.setTime(new Date());
-        books1.setMaster(person);
+//        Person person = new Person();
+//        person.setName("tom");
+//        person.setTime(new Date());
+//        session.save(person);
+        Person person = session.get(Person.class, "297e45075ebd62fc015ebd63051b0000");
+        Book book = new Book();
+        book.setName("想个名不容易");
+        book.setTime(new Date());
+        book.setMaster(person);
+//        Book book1 = new Book();
+//        book1.setName("确实不容易");
+//        book1.setTime(new Date());
+//        book1.setMaster(person);
 
-        session.save(books);
-        session.save(books1);
+        session.save(book);
+//        session.save(book1);
 
 //        System.out.println("-----------------------------");
 //        System.out.println(person.getName());

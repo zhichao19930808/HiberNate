@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class name="com.ed.action.entity.mapping_o2o.Person" table="xml_o2o_person" >
+		<id name="id" column="person_id">
+			<generator class="uuid"/>
+		</id>
+		<property name="name" column="person_name"/>
+		<property name="time" column="person_time"/>
+		<one-to-one name="book" property-ref="master" lazy="false" cascade="save-update"/>
+	</class>
+
+</hibernate-mapping>

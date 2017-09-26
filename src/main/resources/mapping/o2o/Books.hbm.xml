@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class name="com.ed.action.entity.mapping_o2o.Book" table="xml_o2o_book" >
+		<id name="id" column="book_id">
+            <generator class="uuid"/>
+		</id>
+        <property name="name" column="book_name"/>
+        <property name="time" column="book_time"/>
+        <!--添加唯一（unique="true"）-->
+        <!--column 可以写再 many-to-one 标签中  -->
+        <many-to-one name="master"  cascade="save-update" lazy="false" unique="true" column="master_id"/>
+	</class>
+
+</hibernate-mapping>
