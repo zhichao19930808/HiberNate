@@ -5,7 +5,7 @@
 
 <hibernate-mapping>
 	
-	<class name="com.ed.action.entity.mapping.Books" table="xml_books" >
+	<class name="com.ed.action.entity.mapping_m2m.Books" table="xml_books" >
 		<id name="id" column="book_id">
             <generator class="uuid"/>
 		</id>

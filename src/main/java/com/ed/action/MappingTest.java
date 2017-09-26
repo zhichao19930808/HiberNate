@@ -1,12 +1,10 @@
 package com.ed.action;
 
-import com.ed.action.entity.mapping.Books;
-import com.ed.action.entity.mapping.Person;
+import com.ed.action.entity.mapping_m2m.Books;
+import com.ed.action.entity.mapping_m2m.Person;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-
-import java.util.Date;
 
 
 public class MappingTest {

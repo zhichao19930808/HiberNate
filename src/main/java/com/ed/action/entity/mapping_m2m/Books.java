@@ -1,4 +1,4 @@
-package com.ed.action.entity.mapping;
+package com.ed.action.entity.mapping_m2m;
 
 import java.util.Date;
 
