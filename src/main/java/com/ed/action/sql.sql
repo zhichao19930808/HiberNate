@@ -24,3 +24,7 @@ FROM db_test.m2m_classs_students;
 DROP TABLE db_test.m2m_classs;
 DROP TABLE db_test.m2m_student;
 DROP TABLE db_test.m2m_student_classs;
+
+SELECT *
+FROM db_test.xml_person;
+DROP TABLE db_test.xml_person;
