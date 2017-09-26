@@ -1,14 +1,12 @@
 package com.ed.action.entity.mapping;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 public class Person {
     private String Id;
     private String name;
     private Date time;//出生日期
-    private List<Books> books = new ArrayList<>();//所持有的书
+    private Set<Books> books = new HashSet<>();//所持有的书
 
     public void setId(String id) {
         Id = id;
@@ -22,7 +20,7 @@ public class Person {
         this.time = time;
     }
 
-    public void setBooks(List<Books> books) {
+    public void setBooks(Set<Books> books) {
         this.books = books;
     }
 
@@ -39,7 +37,7 @@ public class Person {
         return time;
     }
 
-    public List<Books> getBooks() {
+    public Set<Books> getBooks() {
         return books;
     }
 }
